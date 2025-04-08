@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FF146D; /* Cor de fundo base */
+    color: white;
+    font-family: 'Alegreya', serif;
+    display: flex;
+    flex-direction: column; /* Organiza o layout de forma vertical */
+    justify-content: flex-start; /* Garante que o conteúdo comece no topo */
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+/* Configuração da imagem de fundo */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ascii-art\ \(5\)\ 1.png');  /* Troque pelo nome do seu arquivo */
+    background-size: cover; /* Ajusta a imagem para cobrir a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    opacity: 0.3; /* Deixa a imagem semi-transparente */
+    z-index: 0; /* Mantém a imagem atrás do conteúdo */
+}
+
+/* Mantém o texto e container acima da imagem */
+.container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem no topo da página */
+.top-image {
+    display: block;
+    position: relative;
+    top: 0px; /* Dá 20px de margem do topo */
+    left: 50%; /* Centraliza a imagem horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralizar exatamente */
+    max-width: 20%; /* Impede que a imagem ultrapasse a tela */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 1; /* Garante que a imagem fique acima da navbar */
+}
+
+/* Container para centralizar o embed */
+.embed-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Move exatamente para o centro */
+    width: 70%; /* Largura do embed */
+    height: 70%; /* Altura do embed */
+    background-color: rgba(0, 0, 0, 0); /* Fundo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Ajustando o iframe (embed) dentro da caixa */
+.embed-container iframe {
+    width: 80%;
+    height: 80%;
+    border-radius: 0px; /* Opcional: deixa o embed com bordas arredondadas */
+}
+
+
+/* Navbar container */
+.navbar {
+    width: 960px;
+    height: 75px;
+    background-color: rgba(212, 202, 202, 0.6); /* Cor #D4CACA com 60% de opacidade */
+    position: absolute;
+    bottom: 40px; /* Espaço de 40px da parte de baixo */
+    left: 50%; /* Centraliza a navbar horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centralizar exatamente */
+    display: flex;
+    justify-content: center; /* Alinha os itens da navbar */
+    align-items: center; /* Centraliza verticalmente os itens */
+    border-radius: 500px; /* Deixa as bordas arredondadas */
+    z-index: 0; /* Garante que a navbar fique abaixo da imagem */
+}
+
+/* Estilização do texto no rodapé */
+.footer-text {
+    position: absolute;
+    bottom: 5px; /* Mantém o texto alinhado na parte inferior */
+    left: 48%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Espaço entre os itens */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Define a cor padrão dos textos como preto */
+.footer-text span {
+    color: black;
+}
+
+/* Destaque no 'BUY' */
+.footer-text span:nth-child(3) {
+    font-size: 55px; /* Aumenta o tamanho da fonte do 'BUY' */
+    color: rgb(58, 170, 67); /* Ou outra cor para destacar */
+}

@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color:rgb(16, 129, 107);
+}
+
+.background {
+  background-image: url('grid.png'); /* Você pode trocar isso por uma textura similar, caso tenha */
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #991b1b;
+  border: 10px solid #eab308;
+  width: 600px;
+  padding: 40px;
+  padding-bottom: 80px;
+  position: relative;
+  color: white;
+  box-shadow: 6px 4px 0px #7c2d12;
+}
+
+.card h1 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.card .italic {
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.price {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 22px;
+  color: #facc15;
+}
+
+.buy-button {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 42px;
+  padding: 10px 15px;
+  background: linear-gradient(to bottom, #fef08a, #facc15);
+  border: 3px solid black;
+  box-shadow: 2px 2px 0px #000;
+  cursor: pointer;
+}
+
+.card .extra-borders {
+  padding: 8px 40px;
+  border: 6px dashed rgb(146, 119, 10);
+}
+
+.card .extra-borders:hover {
+  padding: 8px 40px;
+  border: 6px dashed rgb(73, 59, 4);
+}
+
+.buy-button:hover {
+  background: linear-gradient(to bottom,rgb(226, 202, 15), #facc15);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
